@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.neodoo.maven.plugin</groupId>
+    <groupId>com.neodoo</groupId>
     <artifactId>microsoft-api-translate-java-maven-plugin</artifactId>
     <version>0.1-SNAPSHOT</version>
-    <name>Build localize plugin</name>
+    <name>Microsoft API Translator Maven Plugin</name>
     <description>
-        Build localize plugin
+        Build localize plugin with Microsoft API Translator
     </description>
     <packaging>maven-plugin</packaging>
-<!--     
+
     <parent>
        <groupId>org.sonatype.oss</groupId>
        <artifactId>oss-parent</artifactId>
-       <version>5</version>
+       <version>7</version>
     </parent>
    
     <developers>
@@ -43,7 +43,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</comments>
 	  </license>
 	</licenses>
--->        
+
     <build>
         <plugins>
             <plugin>
@@ -103,7 +103,7 @@ THE SOFTWARE.</comments>
 
     </dependencies>
     
-    <!-- https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven 
+    <!-- https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven -->
 	<profiles>
 	  <profile>
 	    <id>release-sign-artifacts</id>
@@ -135,21 +135,21 @@ THE SOFTWARE.</comments>
 	    </build>
 	  </profile>
 	</profiles>    
--->
 
-    <!--  MAVEN DEPLOYMENT REPOSITORY
+
+    <!--  MAVEN DEPLOYMENT REPOSITORY -->
 
     <distributionManagement>
       <repository>
-         <id>ossrh</id>
-         <name>Sonatype OSS Repository</name>
-         <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+           <id>sonatype-nexus-staging</id>
+           <name>Nexus Staging Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
       </repository>
       <snapshotRepository>
-         <id>ossrh</id>
+         <id>sonatype-nexus-snapshots</id>
          <name>Sonatype OSS Repository</name>
-         <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+         <url>https://oss.sonatype.org/content/repositories/snapshots</url>
       </snapshotRepository>
     </distributionManagement>
- -->
+    
 </project>
